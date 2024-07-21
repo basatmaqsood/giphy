@@ -81,7 +81,7 @@ const GifPages = () => {
             <div className="faded-text truncate mb-2">{gif.title}</div>
             <Gif gif={gif} hover={false} />
 
-            <div className="felx sm:hidden gap-1">
+            <div className="felx sm:hidden flex-row gap-1">
               <img
                 src={gif?.user?.avatar_url}
                 alt={gif?.user?.display_name}
@@ -105,14 +105,14 @@ const GifPages = () => {
 
             </button>
             <button
-              onClick={() => {addToFavorites(gif.id)}}
+              onClick={() => {}}
               className="flex gap-5 items-center font-bold text-lg"
             >
               <FaPaperPlane size={30}  />Share
 
             </button>
             <button
-              onClick={() => {addToFavorites(gif.id)}}
+              onClick={() => {}}
               className="flex gap-5 items-center font-bold text-lg"
             >
               <IoCodeSharp size={30}  />Embed

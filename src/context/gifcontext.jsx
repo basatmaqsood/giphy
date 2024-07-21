@@ -8,10 +8,11 @@ const GifProvider = ({children})=>{
     const [favorites, setFavorites] = useState([]);
 
     const addToFavorites = (gifid)=>{
-        let result;
+        let result = favorites;
         if(favorites.includes(gifid)){
-            result = favorites.pop(gifid);
-            setFavorites(results);
+            result = result.filter((g)=>g!==gifid);
+            setFavorites(result);
+            return;
         }
         setFavorites([...favorites,gifid]);
     }
