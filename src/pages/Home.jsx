@@ -4,7 +4,7 @@ import Gif from "../components/Gif";
 import FilterGif from "../components/FilterGif";
 
 const Home = () => {
-  const { gf, setGif, gif, filter, setFilter, favorites } = GifState();
+  const { gf, setGif, gif, filter } = GifState();
   const fetchTrendingGifs = async () => {
     const { data } = await gf.trending({
       limit: 15,
