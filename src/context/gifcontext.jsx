@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { createContext, useContext, useEffect, useState } from "react";
 import { GiphyFetch } from "@giphy/js-fetch-api";
 
