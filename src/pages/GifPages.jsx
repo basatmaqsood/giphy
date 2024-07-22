@@ -31,7 +31,7 @@ const GifPages = () => {
       throw new Error("Invalid content type");
     }
     fetchGif();
-  }, []);
+  }, [type,slug]);
 
   return (
     <div className="grid grid-cols-4 my-10 gap-4">
@@ -125,7 +125,7 @@ const GifPages = () => {
           <div className="columns-2 md:columns-3  gap-2">
         {
           relatedGifs.slice(1).map((g,i)=>{
-            console.log(g);
+             
             return <Gif key={i} gif={g}/>
           })
         }
