@@ -29,11 +29,11 @@ const Header = () => {
           </h1>
         </Link>
         <div className="font-bold text-md flex gap-2 items-center justify-center">
-          {category?.slice(0, 5)?.map((singleCategory) => {
+          {category?.slice(0, 5)?.map((singleCategory,i) => {
             return (
               <Link
                 className=" px-4 py-1 hover:gradient border-b-4 hidden lg:block "
-                key={category.name}
+                key={i}
                 to={`/${singleCategory.name_encoded}`}
               >
                 {singleCategory.name}
@@ -70,8 +70,8 @@ const Header = () => {
             <hr className="bg-gray-100 opacity-50 my-5"/>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
                 {console.log(category)}
-              {category?.map((singleCategory) => {
-               return <Link to={`/${singleCategory.name_encoded}`} key={singleCategory.name}>{singleCategory.name}</Link>;
+              {category?.map((singleCategory,i) => {
+               return <Link to={`/${singleCategory.name_encoded}`} key={i}>{singleCategory.name}</Link>;
               })}
             </div>
           </div>
