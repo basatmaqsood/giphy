@@ -122,6 +122,14 @@ const GifPages = () => {
         </div>
         <div>
           <span className="font-extrabold">Related Gifs</span>
+          <div className="columns-2 md:columns-3  gap-2">
+        {
+          relatedGifs.slice(1).map((g)=>{
+            return <Gif key={g?.title} gif={g}/>
+          })
+        }
+        
+      </div>
         </div>
       </div>
     </div>
