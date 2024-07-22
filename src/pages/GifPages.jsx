@@ -81,7 +81,7 @@ const GifPages = () => {
             <div className="faded-text truncate mb-2">{gif.title}</div>
             <Gif gif={gif} hover={false} />
 
-            <div className="felx sm:hidden flex-row gap-1">
+            <div className="flex sm:hidden flex-row gap-2 my-2">
               <img
                 src={gif?.user?.avatar_url}
                 alt={gif?.user?.display_name}
@@ -91,7 +91,7 @@ const GifPages = () => {
                 <div className="font-bold">{gif?.user?.display_name}</div>
                 <div className="faded-text">@{gif?.user?.username}</div>
               </div>
-              <button className="ml-auto" onClick={() => {}}>
+              <button className="ml-auto my-2" onClick={() => {}}>
                 <FaPaperPlane size={25} />
               </button>
             </div>
